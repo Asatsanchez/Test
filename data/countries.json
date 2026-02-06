@@ -1,0 +1,176 @@
+[
+    {
+        "code": "US",
+        "name": "United States",
+        "flag": "🇺🇸",
+        "region": "Americas",
+        "complexity": "Medium",
+        "hours": "80-120",
+        "implementations": 12,
+        "taxTypes": ["Backup Withholding (24%)", "FATCA", "Form 1099 Reporting"],
+        "overview": "US withholding tax system includes backup withholding for missing TINs, Form 1099 reporting for domestic contractors, and Form 1042-S for foreign persons. Treaty benefits available for qualified non-residents.",
+        "considerations": [
+            "Certificate management (W-9, W-8BEN, W-8BEN-E)",
+            "Annual 1099 and 1042-S filing requirements",
+            "State-level withholding variations",
+            "FATCA compliance for foreign accounts"
+        ]
+    },
+    {
+        "code": "IN",
+        "name": "India",
+        "flag": "🇮🇳",
+        "region": "APJ",
+        "complexity": "High",
+        "hours": "120-160",
+        "implementations": 15,
+        "taxTypes": ["TDS Section 194J (10%)", "TDS Section 194C (1-2%)", "TDS Section 195 (20%)"],
+        "overview": "India Tax Deducted at Source (TDS) system is highly complex with multiple sections for different payment types. Requires quarterly filing via TRACES portal with Form 26Q and 27Q.",
+        "considerations": [
+            "Multiple TDS sections with varying rates",
+            "Form 15CA/CB for foreign payments",
+            "Lower deduction certificates (Form 197)",
+            "Quarterly TDS return filing (26Q, 27Q, 24Q)",
+            "PAN validation requirements"
+        ]
+    },
+    {
+        "code": "BR",
+        "name": "Brazil",
+        "flag": "🇧🇷",
+        "region": "LATAM",
+        "complexity": "High",
+        "hours": "120-160",
+        "implementations": 8,
+        "taxTypes": ["IRRF - Income Tax (0.75-27.5%)", "ISS - Service Tax (2-5%)", "PIS/COFINS (9.25%)"],
+        "overview": "Brazilian withholding system includes IRRF on various income types and ISS municipal service tax. Complex regulatory environment with frequent changes.",
+        "considerations": [
+            "Multiple federal and municipal taxes",
+            "DIRF annual declaration requirement",
+            "Electronic invoicing (NF-e, NFS-e) integration",
+            "SPED fiscal reporting",
+            "eSocial compliance"
+        ]
+    },
+    {
+        "code": "GB",
+        "name": "United Kingdom",
+        "flag": "🇬🇧",
+        "region": "EMEA",
+        "complexity": "Low",
+        "hours": "60-80",
+        "implementations": 10,
+        "taxTypes": ["CIS - Construction Industry Scheme (20/30%)", "Interest Withholding (20%)"],
+        "overview": "UK CIS for construction contractors and standard withholding on interest payments. Relatively straightforward with good HMRC systems integration.",
+        "considerations": [
+            "CIS registration and gross payment status",
+            "Monthly CIS returns to HMRC",
+            "UTR (Unique Taxpayer Reference) validation",
+            "Real-time reporting requirements"
+        ]
+    },
+    {
+        "code": "DE",
+        "name": "Germany",
+        "flag": "🇩🇪",
+        "region": "EMEA",
+        "complexity": "Medium",
+        "hours": "80-120",
+        "implementations": 7,
+        "taxTypes": ["Withholding Tax on Services (0-25%)", "Investment Income Tax (25%)"],
+        "overview": "German withholding applies to certain service types and investment income. Exemption certificates (Freistellungsbescheinigung) reduce administrative burden.",
+        "considerations": [
+            "Certificate of residence for treaty benefits",
+            "Exemption certificate management",
+            "Annual tax certificate (Steuerbescheinigung)",
+            "Electronic filing requirements"
+        ]
+    },
+    {
+        "code": "CN",
+        "name": "China",
+        "flag": "🇨🇳",
+        "region": "APJ",
+        "complexity": "High",
+        "hours": "120-160",
+        "implementations": 6,
+        "taxTypes": ["Business Tax (5-6%)", "VAT (6-17%)", "Income Tax (10-25%)"],
+        "overview": "Chinese withholding system complex with VAT and business tax considerations. Fapiao (official invoices) critical for compliance.",
+        "considerations": [
+            "Fapiao invoice requirements",
+            "Multiple tax types and rates",
+            "Local tax bureau registration",
+            "Tax treaty documentation",
+            "Monthly tax filing requirements"
+        ]
+    },
+    {
+        "code": "FR",
+        "name": "France",
+        "flag": "🇫🇷",
+        "region": "EMEA",
+        "complexity": "Medium",
+        "hours": "80-120",
+        "implementations": 5,
+        "taxTypes": ["Withholding Tax on Services (0-33.33%)", "Prélèvement à la Source"],
+        "overview": "French withholding system modernized with Prélèvement à la Source. Treaty benefits available for non-residents with proper documentation.",
+        "considerations": [
+            "Certificate of residence requirements",
+            "Annual tax declaration (2561)",
+            "Electronic filing via EDI",
+            "Treaty benefit documentation"
+        ]
+    },
+    {
+        "code": "CA",
+        "name": "Canada",
+        "flag": "🇨🇦",
+        "region": "Americas",
+        "complexity": "Low",
+        "hours": "60-80",
+        "implementations": 9,
+        "taxTypes": ["Non-Resident Withholding (25%)", "Part XIII Tax"],
+        "overview": "Canadian non-resident withholding straightforward with standard 25% rate, reduced by treaty. Good CRA online services.",
+        "considerations": [
+            "Treaty benefit applications",
+            "NR4 information return",
+            "Waiver applications for exemptions",
+            "Provincial tax considerations"
+        ]
+    },
+    {
+        "code": "AU",
+        "name": "Australia",
+        "flag": "🇦🇺",
+        "region": "APJ",
+        "complexity": "Low",
+        "hours": "60-80",
+        "implementations": 8,
+        "taxTypes": ["PAYG Withholding (47%)", "WHT on Services (5-30%)"],
+        "overview": "Australian withholding system with PAYG for contractors and specific rates for non-residents. Well-structured ATO guidance.",
+        "considerations": [
+            "ABN (Australian Business Number) validation",
+            "TFN declaration forms",
+            "Annual PAYG payment summary",
+            "Activity statement reporting"
+        ]
+    },
+    {
+        "code": "MX",
+        "name": "Mexico",
+        "flag": "🇲🇽",
+        "region": "LATAM",
+        "complexity": "Medium",
+        "hours": "80-120",
+        "implementations": 6,
+        "taxTypes": ["ISR - Income Tax (10-30%)", "IVA - VAT (16%)", "Retention Rates"],
+        "overview": "Mexican retention system includes ISR and IVA with monthly filing requirements. CFDI electronic invoicing mandatory.",
+        "considerations": [
+            "RFC (tax ID) validation",
+            "CFDI electronic invoice compliance",
+            "Monthly provisional payments",
+            "Annual declaration requirements",
+            "SAT portal integration"
+        ]
+    }
+]
