@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Materials - WHT Playbook</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div>Deloitte US Tax Technology</div>
+                <div class="language-selector" id="languageSelector">
+                    <span>🌐</span>
+                    <span id="currentLanguage">English</span>
+                    <span>▼</span>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option active" data-lang="en">🇺🇸 English</div>
+                        <div class="language-option" data-lang="es">🇪🇸 Español</div>
+                        <div class="language-option" data-lang="fr">🇫🇷 Français</div>
+                        <div class="language-option" data-lang="de">🇩🇪 Deutsch</div>
+                        <div class="language-option" data-lang="pt">🇵🇹 Português</div>
+                        <div class="language-option" data-lang="zh">🇨🇳 中文</div>
+                        <div class="language-option" data-lang="ja">🇯🇵 日本語</div>
+                        <div class="language-option" data-lang="hi">🇮🇳 हिन्दी</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="logo-section">
+                <div class="deloitte-logo">
+                    Deloitte<span class="deloitte-dot">.</span>
+                </div>
+                <div class="playbook-title">WHT Automation Playbook</div>
+            </div>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sales.html" class="nav-link">Sales & Setup</a>
+                <a href="implementation.html" class="nav-link">Implementation</a>
+                <a href="countries.html" class="nav-link">Country Library</a>
+                <a href="tools.html" class="nav-link">Templates & Tools</a>
+                <a href="oracle.html" class="nav-link">Oracle Technical</a>
+                <a href="training.html" class="nav-link active">Training</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header header-training">
+            <h1>Training Materials</h1>
+            <p>Comprehensive Learning Resources for All Roles</p>
+        </div>
+
+        <!-- Training Paths -->
+        <section>
+            <h2 class="section-title text-center">Learning Paths by Role</h2>
+            <p class="section-subtitle text-center">Select your role to access tailored training materials</p>
+
+            <div class="features-grid" style="margin-top: 40px;">
+                <div class="feature-card" style="cursor: pointer;" onclick="showRoleContent('enduser')">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, var(--deloitte-blue) 0%, var(--deloitte-cyan) 100%);">👤</div>
+                    <h3>End Users</h3>
+                    <p><strong>AP Clerks, Payment Processors</strong></p>
+                    <p style="font-size: 14px; margin-top: 12px;">
+                        • Invoice entry with WHT<br>
+                        • Certificate management<br>
+                        • Payment processing<br>
+                        • Basic troubleshooting<br><br>
+                        <strong>Duration:</strong> 4 hours<br>
+                        <strong>Format:</strong> Video + Hands-on
+                    </p>
+                </div>
+
+                <div class="feature-card" style="cursor: pointer;" onclick="showRoleContent('tax')">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, var(--deloitte-orange) 0%, #c77700 100%);">📊</div>
+                    <h3>Tax Professionals</h3>
+                    <p><strong>Tax Managers, Compliance Officers</strong></p>
+                    <p style="font-size: 14px; margin-top: 12px;">
+                        • Tax rule configuration<br>
+                        • Certificate validation<br>
+                        • Statutory reporting<br>
+                        • Compliance monitoring<br><br>
+                        <strong>Duration:</strong> 8 hours<br>
+                        <strong>Format:</strong> Workshop + Case Studies
+                    </p>
+                </div>
+
+                <div class="feature-card" style="cursor: pointer;" onclick="showRoleContent('technical')">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, var(--deloitte-red) 0%, #b01f17 100%);">⚙️</div>
+                    <h3>Technical Administrators</h3>
+                    <p><strong>Oracle Admins, IT Support</strong></p>
+                    <p style="font-size: 14px; margin-top: 12px;">
+                        • System configuration<br>
+                        • Integration management<br>
+                        • Performance tuning<br>
+                        • Issue resolution<br><br>
+                        <strong>Duration:</strong> 12 hours<br>
+                        <strong>Format:</strong> Technical Deep Dive
+                    </p>
+                </div>
+
+                <div class="feature-card" style="cursor: pointer;" onclick="showRoleContent('executive')">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, var(--deloitte-green) 0%, #6b9c1f 100%);">👔</div>
+                    <h3>Executives & Sponsors</h3>
+                    <p><strong>Finance Leaders, Project Sponsors</strong></p>
+                    <p style="font-size: 14px; margin-top: 12px;">
+                        • Business value overview<br>
+                        • ROI and metrics<br>
+                        • Risk management<br>
+                        • Strategic benefits<br><br>
+                        <strong>Duration:</strong> 2 hours<br>
+                        <strong>Format:</strong> Executive Briefing
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Library -->
+        <section class="mt-40">
+            <h2 class="section-title">📹 Video Training Library</h2>
+            <p class="section-subtitle">On-demand video tutorials for self-paced learning</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #c62828 0%, #ef5350 100%); color: white;">▶</div>
+                    <div class="tool-type">VIDEO TUTORIAL • 15 MIN</div>
+                    <h3>Introduction to WHT Automation</h3>
+                    <p>Overview of withholding tax automation concepts, business benefits, and Oracle solution capabilities.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">👁️ 1,247 views</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Watch Video</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #c62828 0%, #ef5350 100%); color: white;">▶</div>
+                    <div class="tool-type">VIDEO TUTORIAL • 25 MIN</div>
+                    <h3>Invoice Entry with Withholding Tax</h3>
+                    <p>Step-by-step guide for creating invoices with automatic WHT calculation, including certificate validation.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">👁️ 2,145 views</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Watch Video</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #c62828 0%, #ef5350 100%); color: white;">▶</div>
+                    <div class="tool-type">VIDEO TUTORIAL • 30 MIN</div>
+                    <h3>Certificate Management Workflows</h3>
+                    <p>Complete walkthrough of certificate upload, validation, expiry tracking, and renewal processes.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">👁️ 1,832 views</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Watch Video</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #c62828 0%, #ef5350 100%); color: white;">▶</div>
+                    <div class="tool-type">VIDEO TUTORIAL • 35 MIN</div>
+                    <h3>Tax Configuration Deep Dive</h3>
+                    <p>Technical training on tax regime setup, rate configuration, and determination rules with examples.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">👁️ 987 views</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Watch Video</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #c62828 0%, #ef5350 100%); color: white;">▶</div>
+                    <div class="tool-type">VIDEO TUTORIAL • 20 MIN</div>
+                    <h3>Statutory Reporting & Filing</h3>
+                    <p>How to generate statutory reports, validate data, and prepare for tax authority submissions.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">👁️ 1,456 views</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Watch Video</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #c62828 0%, #ef5350 100%); color: white;">▶</div>
+                    <div class="tool-type">VIDEO TUTORIAL • 40 MIN</div>
+                    <h3>Integration Setup & Management</h3>
+                    <p>Technical guide to configuring integrations, monitoring data flows, and troubleshooting issues.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">👁️ 743 views</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Watch Video</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Guides -->
+        <section class="mt-40">
+            <h2 class="section-title">📖 User Guides & Documentation</h2>
+            <p class="section-subtitle">Comprehensive written documentation with screenshots</p>
+
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">📘</div>
+                        <div>
+                            <h4>End User Guide</h4>
+                            <div class="resource-meta">PDF • 124 pages • 8.2 MB</div>
+                        </div>
+                    </div>
+                    <p>Complete guide for AP clerks covering invoice entry, payment processing, certificate management, and common tasks.</p>
+                    <button class="btn btn-outline btn-small mt-20">Download PDF</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">📗</div>
+                        <div>
+                            <h4>Tax Manager Guide</h4>
+                            <div class="resource-meta">PDF • 186 pages • 12.4 MB</div>
+                        </div>
+                    </div>
+                    <p>Advanced guide for tax professionals covering compliance workflows, exception management, and reporting.</p>
+                    <button class="btn btn-outline btn-small mt-20">Download PDF</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">📕</div>
+                        <div>
+                            <h4>Administrator Guide</h4>
+                            <div class="resource-meta">PDF • 245 pages • 18.6 MB</div>
+                        </div>
+                    </div>
+                    <p>Technical documentation for system administrators covering configuration, maintenance, and troubleshooting.</p>
+                    <button class="btn btn-outline btn-small mt-20">Download PDF</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">📙</div>
+                        <div>
+                            <h4>Quick Reference Cards</h4>
+                            <div class="resource-meta">PDF • 24 pages • 2.1 MB</div>
+                        </div>
+                    </div>
+                    <p>Laminated quick reference guides for common tasks, perfect for desk-side reference.</p>
+                    <button class="btn btn-outline btn-small mt-20">Download PDF</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">❓</div>
+                        <div>
+                            <h4>FAQs & Troubleshooting</h4>
+                            <div class="resource-meta">PDF • 68 pages • 4.8 MB</div>
+                        </div>
+                    </div>
+                    <p>Comprehensive FAQ document with solutions to common issues and error messages.</p>
+                    <button class="btn btn-outline btn-small mt-20">Download PDF</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">🌍</div>
+                        <div>
+                            <h4>Country-Specific Guides</h4>
+                            <div class="resource-meta">PDF • 54 files • 142 MB</div>
+                        </div>
+                    </div>
+                    <p>Detailed guides for each country covering local regulations, certificate requirements, and reporting.</p>
+                    <button class="btn btn-outline btn-small mt-20">Download Package</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Training Schedule -->
+        <section class="mt-40">
+            <h2 class="section-title">📅 Upcoming Live Training Sessions</h2>
+            <p class="section-subtitle">Register for instructor-led virtual workshops</p>
+
+            <div class="phase-section">
+                <div class="training-schedule">
+                    <div class="training-session">
+                        <div class="session-date">
+                            <div class="date-month">FEB</div>
+                            <div class="date-day">15</div>
+                        </div>
+                        <div class="session-details">
+                            <h4>WHT Automation Fundamentals</h4>
+                            <p style="color: var(--deloitte-dark-gray); font-size: 14px; margin: 8px 0;">
+                                Introduction to Oracle WHT capabilities, business benefits, and implementation approach
+                            </p>
+                            <div style="display: flex; gap: 20px; font-size: 13px; color: var(--deloitte-dark-gray); margin-top: 12px;">
+                                <span>⏰ 10:00 AM - 12:00 PM EST</span>
+                                <span>👥 Max 25 participants</span>
+                                <span>🎓 Certificate provided</span>
+                            </div>
+                        </div>
+                        <div class="session-action">
+                            <button class="btn btn-primary btn-small">Register</button>
+                            <span style="display: block; font-size: 12px; color: var(--deloitte-dark-gray); margin-top: 8px;">12 seats left</span>
+                        </div>
+                    </div>
+
+                    <div class="training-session">
+                        <div class="session-date">
+                            <div class="date-month">FEB</div>
+                            <div class="date-day">22</div>
+                        </div>
+                        <div class="session-details">
+                            <h4>Advanced Tax Configuration Workshop</h4>
+                            <p style="color: var(--deloitte-dark-gray); font-size: 14px; margin: 8px 0;">
+                                Deep dive into tax regime setup, complex determination rules, and certificate management
+                            </p>
+                            <div style="display: flex; gap: 20px; font-size: 13px; color: var(--deloitte-dark-gray); margin-top: 12px;">
+                                <span>⏰ 1:00 PM - 5:00 PM EST</span>
+                                <span>👥 Max 15 participants</span>
+                                <span>🎓 Advanced Certificate</span>
+                            </div>
+                        </div>
+                        <div class="session-action">
+                            <button class="btn btn-primary btn-small">Register</button>
+                            <span style="display: block; font-size: 12px; color: var(--deloitte-dark-gray); margin-top: 8px;">8 seats left</span>
+                        </div>
+                    </div>
+
+                    <div class="training-session">
+                        <div class="session-date">
+                            <div class="date-month">MAR</div>
+                            <div class="date-day">05</div>
+                        </div>
+                        <div class="session-details">
+                            <h4>India TDS Implementation Masterclass</h4>
+                            <p style="color: var(--deloitte-dark-gray); font-size: 14px; margin: 8px 0;">
+                                Country-specific deep dive: TDS sections, Form 26Q/27Q, certificate validation, and TRACES integration
+                            </p>
+                            <div style="display: flex; gap: 20px; font-size: 13px; color: var(--deloitte-dark-gray); margin-top: 12px;">
+                                <span>⏰ 9:00 AM - 1:00 PM IST</span>
+                                <span>👥 Max 30 participants</span>
+                                <span>🎓 Country Expert Badge</span>
+                            </div>
+                        </div>
+                        <div class="session-action">
+                            <button class="btn btn-primary btn-small">Register</button>
+                            <span style="display: block; font-size: 12px; color: var(--deloitte-dark-gray); margin-top: 8px;">20 seats left</span>
+                        </div>
+                    </div>
+
+                    <div class="training-session">
+                        <div class="session-date">
+                            <div class="date-month">MAR</div>
+                            <div class="date-day">19</div>
+                        </div>
+                        <div class="session-details">
+                            <h4>Integration & Reporting Technical Workshop</h4>
+                            <p style="color: var(--deloitte-dark-gray); font-size: 14px; margin: 8px 0;">
+                                Technical training on REST APIs, OIC patterns, OTBI setup, and BI Publisher report development
+                            </p>
+                            <div style="display: flex; gap: 20px; font-size: 13px; color: var(--deloitte-dark-gray); margin-top: 12px;">
+                                <span>⏰ 10:00 AM - 3:00 PM EST</span>
+                                <span>👥 Max 20 participants</span>
+                                <span>🎓 Technical Certificate</span>
+                            </div>
+                        </div>
+                        <div class="session-action">
+                            <button class="btn btn-primary btn-small">Register</button>
+                            <span style="display: block; font-size: 12px; color: var(--deloitte-dark-gray); margin-top: 8px;">15 seats left</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Base -->
+        <section class="mt-40">
+            <h2 class="section-title">💡 Knowledge Base & FAQs</h2>
+            <p class="section-subtitle">Quick answers to common questions</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I upload a tax certificate for a supplier?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Steps:</strong></p>
+                        <ol>
+                            <li>Navigate to: Procurement → Suppliers → Manage Suppliers</li>
+                            <li>Search for and select the supplier</li>
+                            <li>Click on "Tax Details" tab</li>
+                            <li>Click "Add Certificate"</li>
+                            <li>Enter certificate details (type, number, valid from/to dates)</li>
+                            <li>Upload supporting document (PDF)</li>
+                            <li>Click "Save and Close"</li>
+                        </ol>
+                        <p><strong>Validation:</strong> System will automatically validate certificate number format and expiry date.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens if a certificate expires during an invoice approval cycle?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>System Behavior:</strong></p>
+                        <ul>
+                            <li>System checks certificate validity at time of tax calculation (not invoice entry)</li>
+                            <li>If certificate expires before payment, system applies standard (higher) rate</li>
+                            <li>Holds are automatically placed on invoices requiring certificate renewal</li>
+                            <li>Notification sent to tax team and supplier contact</li>
+                        </ul>
+                        <p><strong>Resolution:</strong> Upload renewed certificate, then release hold manually or through workflow.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I manually override the calculated WHT amount?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Yes, if enabled:</strong> Manual override capability must be enabled in Tax Options by administrator.</p>
+                        <p><strong>Process:</strong></p>
+                        <ol>
+                            <li>Open the invoice in edit mode</li>
+                            <li>Navigate to tax details section</li>
+                            <li>Click "Override" on tax line</li>
+                            <li>Enter reason code and new amount</li>
+                            <li>Save (override logs for audit trail)</li>
+                        </ol>
+                        <p><strong>Best Practice:</strong> Use override sparingly and document reason in notes field.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I generate the quarterly WHT return report?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Navigation:</strong></p>
+                        <ol>
+                            <li>Go to: Tools → Reports and Analytics</li>
+                            <li>Search: "Withholding Tax Return Report"</li>
+                            <li>Click "Create" to schedule the report</li>
+                            <li>Enter parameters:
+                                <ul>
+                                    <li>Business Unit</li>
+                                    <li>Reporting Period (Quarter)</li>
+                                    <li>Country/Tax Regime</li>
+                                    <li>Output Format (PDF/Excel)</li>
+                                </ul>
+                            </li>
+                            <li>Submit and monitor in Scheduled Processes</li>
+                        </ol>
+                        <p><strong>Output:</strong> Report includes all WHT transactions for the period with supplier details, amounts, and certificate references.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What should I do if tax is not calculating on an invoice?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Troubleshooting Checklist:</strong></p>
+                        <ol>
+                            <li><strong>Check Supplier Setup:</strong> Verify supplier has tax classification and WHT is enabled at site level</li>
+                            <li><strong>Verify Certificate:</strong> Ensure certificate is attached and status is "Valid"</li>
+                            <li><strong>Review Tax Rules:</strong> Check that determination rules match invoice attributes (service type, amount, date)</li>
+                            <li><strong>Check Invoice Attributes:</strong> Verify tax classification code is populated on invoice line</li>
+                            <li><strong>Validate Tax Regime:</strong> Confirm tax regime is active and effective for transaction date</li>
+                        </ol>
+                        <p><strong>Still Not Working?</strong> Contact your tax administrator or submit a help desk ticket with invoice number.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Program -->
+        <section class="mt-40">
+            <div class="download-box" style="background: linear-gradient(135deg, var(--deloitte-green) 0%, #6b9c1f 100%); color: white; border: none;">
+                <h3 style="color: white;">🏆 WHT Automation Certification Program</h3>
+                <p style="color: rgba(255,255,255,0.95);">Become a certified WHT implementation specialist through our comprehensive certification program</p>
+                <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; font-weight: 700;">Level 1</div>
+                        <div style="font-size: 14px; opacity: 0.9;">User Certified</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; font-weight: 700;">Level 2</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Administrator Certified</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; font-weight: 700;">Level 3</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Implementation Specialist</div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary mt-20">Learn About Certification</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>About WHT Playbook</h4>
+                    <p>Your comprehensive resource for withholding tax automation implementations across 50+ countries using Oracle native solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sales.html">Sales & Setup</a></li>
+                        <li><a href="implementation.html">Implementation</a></li>
+                        <li><a href="countries.html">Country Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="tools.html">Templates & Tools</a></li>
+                        <li><a href="oracle.html">Oracle Technical</a></li>
+                        <li><a href="training.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:wht.playbook@deloitte.com">wht.playbook@deloitte.com</a></li>
+                        <li>Teams Channel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Deloitte US. All rights reserved. • Version 2.0.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize FAQ toggles
+        initFAQ();
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Library - WHT Playbook</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div>Deloitte US Tax Technology</div>
+                <div class="language-selector" id="languageSelector">
+                    <span>🌐</span>
+                    <span id="currentLanguage">English</span>
+                    <span>▼</span>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option active" data-lang="en">🇺🇸 English</div>
+                        <div class="language-option" data-lang="es">🇪🇸 Español</div>
+                        <div class="language-option" data-lang="fr">🇫🇷 Français</div>
+                        <div class="language-option" data-lang="de">🇩🇪 Deutsch</div>
+                        <div class="language-option" data-lang="pt">🇵🇹 Português</div>
+                        <div class="language-option" data-lang="zh">🇨🇳 中文</div>
+                        <div class="language-option" data-lang="ja">🇯🇵 日本語</div>
+                        <div class="language-option" data-lang="hi">🇮🇳 हिन्दी</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="logo-section">
+                <div class="deloitte-logo">
+                    Deloitte<span class="deloitte-dot">.</span>
+                </div>
+                <div class="playbook-title">WHT Automation Playbook</div>
+            </div>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sales.html" class="nav-link">Sales & Setup</a>
+                <a href="implementation.html" class="nav-link">Implementation</a>
+                <a href="countries.html" class="nav-link active">Country Library</a>
+                <a href="tools.html" class="nav-link">Templates & Tools</a>
+                <a href="oracle.html" class="nav-link">Oracle Technical</a>
+                <a href="training.html" class="nav-link">Training</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header" style="background: linear-gradient(135deg, var(--deloitte-blue) 0%, var(--deloitte-cyan) 100%);">
+            <h1>Country Library</h1>
+            <p>Comprehensive Regulatory Guides for 54 Countries</p>
+        </div>
+
+        <!-- Search Section -->
+        <section class="search-section" style="margin-top: 0;">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search countries, tax types, or keywords..."
+                >
+                <button class="search-btn" id="searchBtn">🔍</button>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section>
+            <div class="region-filters">
+                <button class="region-btn active" data-filter="all">
+                    <span>🌍 All Regions</span>
+                    <span class="region-count">10</span>
+                </button>
+                <button class="region-btn" data-filter="Americas">
+                    <span>🌎 Americas</span>
+                    <span class="region-count">2</span>
+                </button>
+                <button class="region-btn" data-filter="EMEA">
+                    <span>🌍 EMEA</span>
+                    <span class="region-count">3</span>
+                </button>
+                <button class="region-btn" data-filter="APJ">
+                    <span>🌏 APJ</span>
+                    <span class="region-count">3</span>
+                </button>
+                <button class="region-btn" data-filter="LATAM">
+                    <span>🌎 LATAM</span>
+                    <span class="region-count">2</span>
+                </button>
+            </div>
+
+            <!-- Complexity Filter -->
+            <div class="region-filters" style="margin-top: 20px;">
+                <button class="region-btn" data-complexity="all" style="background: var(--bg-light);">
+                    <span>All Complexity</span>
+                </button>
+                <button class="region-btn" data-complexity="low" style="background: #e8f5e9; color: #2e7d32; border-color: #2e7d32;">
+                    <span>Low Complexity</span>
+                </button>
+                <button class="region-btn" data-complexity="medium" style="background: #fff3e0; color: #ef6c00; border-color: #ef6c00;">
+                    <span>Medium Complexity</span>
+                </button>
+                <button class="region-btn" data-complexity="high" style="background: #ffebee; color: #c62828; border-color: #c62828;">
+                    <span>High Complexity</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Country Grid -->
+        <section>
+            <div class="country-grid" id="countryGrid">
+                <!-- Countries will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Implementation Tips -->
+        <section class="mt-40">
+            <h2 class="section-title text-center">Implementation Considerations by Complexity</h2>
+            
+            <div class="features-grid" style="margin-top: 40px;">
+                <div class="feature-card" style="border-left: 4px solid #2e7d32;">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);">✓</div>
+                    <h3 style="color: #2e7d32;">Low Complexity Countries</h3>
+                    <p><strong>Characteristics:</strong></p>
+                    <p style="font-size: 14px;">
+                        • Simple withholding rules with few exceptions<br>
+                        • Standard certificate management<br>
+                        • Minimal system integrations required<br>
+                        • Basic reporting requirements<br><br>
+                        <strong>Examples:</strong> UK, Canada, Australia, Singapore<br>
+                        <strong>Typical Timeline:</strong> 8-12 weeks<br>
+                        <strong>Estimated Hours:</strong> 60-80 hours
+                    </p>
+                </div>
+
+                <div class="feature-card" style="border-left: 4px solid #ef6c00;">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ef6c00 0%, #ffa726 100%);">⚡</div>
+                    <h3 style="color: #ef6c00;">Medium Complexity Countries</h3>
+                    <p><strong>Characteristics:</strong></p>
+                    <p style="font-size: 14px;">
+                        • Multiple withholding categories<br>
+                        • Certificate validation requirements<br>
+                        • Moderate integration needs<br>
+                        • Complex reporting and filing<br><br>
+                        <strong>Examples:</strong> US, Germany, France, Japan<br>
+                        <strong>Typical Timeline:</strong> 12-16 weeks<br>
+                        <strong>Estimated Hours:</strong> 80-120 hours
+                    </p>
+                </div>
+
+                <div class="feature-card" style="border-left: 4px solid #c62828;">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #c62828 0%, #ef5350 100%);">🔥</div>
+                    <h3 style="color: #c62828;">High Complexity Countries</h3>
+                    <p><strong>Characteristics:</strong></p>
+                    <p style="font-size: 14px;">
+                        • Highly complex regulatory environment<br>
+                        • Extensive certificate management<br>
+                        • Multiple statutory filings<br>
+                        • Complex system integrations<br><br>
+                        <strong>Examples:</strong> India, Brazil, China, Russia<br>
+                        <strong>Typical Timeline:</strong> 16-24 weeks<br>
+                        <strong>Estimated Hours:</strong> 120-160 hours
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>About WHT Playbook</h4>
+                    <p>Your comprehensive resource for withholding tax automation implementations across 50+ countries using Oracle native solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sales.html">Sales & Setup</a></li>
+                        <li><a href="implementation.html">Implementation</a></li>
+                        <li><a href="countries.html">Country Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="tools.html">Templates & Tools</a></li>
+                        <li><a href="oracle.html">Oracle Technical</a></li>
+                        <li><a href="training.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:wht.playbook@deloitte.com">wht.playbook@deloitte.com</a></li>
+                        <li>Teams Channel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Deloitte US. All rights reserved. • Version 2.0.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load all countries
+        loadAllCountries();
+    </script>
+</body>
+</html>

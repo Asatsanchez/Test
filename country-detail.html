@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Detail - WHT Playbook</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div>Deloitte US Tax Technology</div>
+                <div class="language-selector" id="languageSelector">
+                    <span>🌐</span>
+                    <span id="currentLanguage">English</span>
+                    <span>▼</span>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option active" data-lang="en">🇺🇸 English</div>
+                        <div class="language-option" data-lang="es">🇪🇸 Español</div>
+                        <div class="language-option" data-lang="fr">🇫🇷 Français</div>
+                        <div class="language-option" data-lang="de">🇩🇪 Deutsch</div>
+                        <div class="language-option" data-lang="pt">🇵🇹 Português</div>
+                        <div class="language-option" data-lang="zh">🇨🇳 中文</div>
+                        <div class="language-option" data-lang="ja">🇯🇵 日本語</div>
+                        <div class="language-option" data-lang="hi">🇮🇳 हिन्दी</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="logo-section">
+                <div class="deloitte-logo">
+                    Deloitte<span class="deloitte-dot">.</span>
+                </div>
+                <div class="playbook-title">WHT Automation Playbook</div>
+            </div>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sales.html" class="nav-link">Sales & Setup</a>
+                <a href="implementation.html" class="nav-link">Implementation</a>
+                <a href="countries.html" class="nav-link active">Country Library</a>
+                <a href="tools.html" class="nav-link">Templates & Tools</a>
+                <a href="oracle.html" class="nav-link">Oracle Technical</a>
+                <a href="training.html" class="nav-link">Training</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div style="padding: 20px 0;">
+            <a href="index.html" style="color: var(--deloitte-dark-gray); text-decoration: none;">Home</a>
+            <span style="margin: 0 8px; color: var(--deloitte-medium-gray);">›</span>
+            <a href="countries.html" style="color: var(--deloitte-dark-gray); text-decoration: none;">Country Library</a>
+            <span style="margin: 0 8px; color: var(--deloitte-medium-gray);">›</span>
+            <span id="breadcrumbCountry" style="color: var(--deloitte-green); font-weight: 600;">Loading...</span>
+        </div>
+
+        <!-- Country Header (Populated by JavaScript) -->
+        <div class="modal-header" style="position: relative; border-radius: 12px; margin-bottom: 40px;">
+            <div>
+                <div class="modal-flag" id="countryFlag">🇺🇸</div>
+                <h1 class="modal-title" id="countryName">United States</h1>
+                <p class="modal-subtitle" id="countryRegion">Americas</p>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="stat-card" style="background: linear-gradient(135deg, var(--deloitte-blue) 0%, var(--deloitte-cyan) 100%);">
+                <div class="stat-label" style="opacity: 1; margin-bottom: 8px;">Complexity</div>
+                <div class="stat-number" style="font-size: 32px;" id="countryComplexity">Medium</div>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, var(--deloitte-orange) 0%, #c77700 100%);">
+                <div class="stat-label" style="opacity: 1; margin-bottom: 8px;">Est. Hours</div>
+                <div class="stat-number" style="font-size: 32px;" id="countryHours">80-120</div>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, var(--deloitte-red) 0%, #b01f17 100%);">
+                <div class="stat-label" style="opacity: 1; margin-bottom: 8px;">Implementations</div>
+                <div class="stat-number" style="font-size: 32px;" id="countryImplementations">12</div>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, var(--deloitte-green) 0%, #6b9c1f 100%);">
+                <div class="stat-label" style="opacity: 1; margin-bottom: 8px;">SME Available</div>
+                <div class="stat-number" style="font-size: 32px;">✓</div>
+            </div>
+        </div>
+
+        <!-- Country Content -->
+        <div class="modal-body" id="countryContent" style="padding: 0; margin-top: 40px;">
+            <!-- Content will be loaded dynamically -->
+            <div class="info-section">
+                <h3>Overview</h3>
+                <p id="countryOverview">Loading country information...</p>
+            </div>
+
+            <div class="info-section">
+                <h3>Primary Withholding Tax Types</h3>
+                <div class="tax-types-grid" id="taxTypes">
+                    <!-- Tax types loaded dynamically -->
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Key Implementation Considerations</h3>
+                <ul class="info-list" id="implementationConsiderations">
+                    <!-- Considerations loaded dynamically -->
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3>Oracle Configuration</h3>
+                <ul class="info-list" id="oracleConfig">
+                    <!-- Configuration details loaded dynamically -->
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3>Common Challenges & Solutions</h3>
+                <ul class="info-list" id="challenges">
+                    <!-- Challenges loaded dynamically -->
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3>Reporting Requirements</h3>
+                <ul class="info-list" id="reporting">
+                    <!-- Reporting requirements loaded dynamically -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-box" style="margin-top: 40px;">
+            <h3>📥 Download Country Implementation Pack</h3>
+            <p>Complete guide with configuration templates, test scripts, and documentation</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+                <button class="btn btn-primary">Download Full Guide (4.2 MB)</button>
+                <button class="btn btn-outline">Download Test Scripts</button>
+                <button class="btn btn-outline">Download Config Template</button>
+            </div>
+        </div>
+
+        <!-- Related Countries -->
+        <section class="mt-40">
+            <h2 class="section-title">Similar Countries</h2>
+            <div class="country-grid" id="relatedCountries">
+                <!-- Related countries loaded dynamically -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>About WHT Playbook</h4>
+                    <p>Your comprehensive resource for withholding tax automation implementations across 50+ countries using Oracle native solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sales.html">Sales & Setup</a></li>
+                        <li><a href="implementation.html">Implementation</a></li>
+                        <li><a href="countries.html">Country Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="tools.html">Templates & Tools</a></li>
+                        <li><a href="oracle.html">Oracle Technical</a></li>
+                        <li><a href="training.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:wht.playbook@deloitte.com">wht.playbook@deloitte.com</a></li>
+                        <li>Teams Channel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Deloitte US. All rights reserved. • Version 2.0.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load country details based on URL parameter
+        loadCountryDetail();
+    </script>
+</body>
+</html>

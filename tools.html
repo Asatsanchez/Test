@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates & Tools - WHT Playbook</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div>Deloitte US Tax Technology</div>
+                <div class="language-selector" id="languageSelector">
+                    <span>🌐</span>
+                    <span id="currentLanguage">English</span>
+                    <span>▼</span>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option active" data-lang="en">🇺🇸 English</div>
+                        <div class="language-option" data-lang="es">🇪🇸 Español</div>
+                        <div class="language-option" data-lang="fr">🇫🇷 Français</div>
+                        <div class="language-option" data-lang="de">🇩🇪 Deutsch</div>
+                        <div class="language-option" data-lang="pt">🇵🇹 Português</div>
+                        <div class="language-option" data-lang="zh">🇨🇳 中文</div>
+                        <div class="language-option" data-lang="ja">🇯🇵 日本語</div>
+                        <div class="language-option" data-lang="hi">🇮🇳 हिन्दी</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="logo-section">
+                <div class="deloitte-logo">
+                    Deloitte<span class="deloitte-dot">.</span>
+                </div>
+                <div class="playbook-title">WHT Automation Playbook</div>
+            </div>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sales.html" class="nav-link">Sales & Setup</a>
+                <a href="implementation.html" class="nav-link">Implementation</a>
+                <a href="countries.html" class="nav-link">Country Library</a>
+                <a href="tools.html" class="nav-link active">Templates & Tools</a>
+                <a href="oracle.html" class="nav-link">Oracle Technical</a>
+                <a href="training.html" class="nav-link">Training</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header" style="background: linear-gradient(135deg, var(--deloitte-green) 0%, #6b9c1f 100%);">
+            <h1>Templates & Tools</h1>
+            <p>Ready-to-Use Resources to Accelerate Your Implementation</p>
+        </div>
+
+        <!-- Search & Filter -->
+        <section class="search-section" style="margin-top: 0;">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="toolSearch" 
+                    class="search-input" 
+                    placeholder="Search templates, tools, or categories..."
+                >
+                <button class="search-btn">🔍</button>
+            </div>
+        </section>
+
+        <!-- Category Filters -->
+        <section>
+            <div class="region-filters">
+                <button class="region-btn active" data-category="all">
+                    <span>All Tools</span>
+                    <span class="region-count">42</span>
+                </button>
+                <button class="region-btn" data-category="excel">
+                    <span>📊 Excel Workbooks</span>
+                    <span class="region-count">15</span>
+                </button>
+                <button class="region-btn" data-category="word">
+                    <span>📄 Word Templates</span>
+                    <span class="region-count">12</span>
+                </button>
+                <button class="region-btn" data-category="powerpoint">
+                    <span>📊 Presentations</span>
+                    <span class="region-count">8</span>
+                </button>
+                <button class="region-btn" data-category="scripts">
+                    <span>💻 Scripts</span>
+                    <span class="region-count">7</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Excel Workbooks Section -->
+        <section>
+            <h2 class="section-title">📊 Excel Workbooks & Calculators</h2>
+            <p class="section-subtitle">Automated tools for analysis, configuration, and tracking</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <div class="tool-type">EXCEL WORKBOOK</div>
+                    <h3>Master Configuration Workbook</h3>
+                    <p>Track all Oracle configurations across multiple countries. Includes validation rules, dependencies, and status dashboards.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">2.4 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">⏱️</div>
+                    <div class="tool-type">EXCEL CALCULATOR</div>
+                    <h3>Hour Estimation Calculator</h3>
+                    <p>Calculate project hours by phase based on 50+ past engagements. Adjust for complexity, team composition, and client readiness.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">1.8 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">💰</div>
+                    <div class="tool-type">EXCEL TOOL</div>
+                    <h3>ROI Analysis Template</h3>
+                    <p>Quantify automation value through reduced manual effort, lower error rates, and improved compliance. Includes industry benchmarks.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">1.5 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <div class="tool-type">EXCEL WORKBOOK</div>
+                    <h3>Complexity Assessment Tool</h3>
+                    <p>Automated scoring model that calculates project complexity based on countries, volumes, and requirements.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">2.1 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📋</div>
+                    <div class="tool-type">EXCEL TEMPLATE</div>
+                    <h3>Data Mapping Workbook</h3>
+                    <p>Map source data to Oracle fields with transformation rules. Includes validation logic and data quality checklist.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">2.4 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">✅</div>
+                    <div class="tool-type">EXCEL TRACKER</div>
+                    <h3>Test Case Repository</h3>
+                    <p>Pre-built test scenarios for 54 countries with expected results, execution steps, and defect tracking.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">8.2 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Word Templates Section -->
+        <section class="mt-40">
+            <h2 class="section-title">📄 Word Document Templates</h2>
+            <p class="section-subtitle">Professional documentation templates for all project phases</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <div class="tool-type">WORD TEMPLATE</div>
+                    <h3>Business Requirements Document (BRD)</h3>
+                    <p>Standard BRD template with WHT-specific sections covering functional requirements, integrations, and reporting needs.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">450 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🏗️</div>
+                    <div class="tool-type">WORD TEMPLATE</div>
+                    <h3>Solution Design Document (SDD)</h3>
+                    <p>Technical design specifications template with Oracle configuration approach, data model, and integration architecture.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">680 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📋</div>
+                    <div class="tool-type">WORD TEMPLATE</div>
+                    <h3>Project Charter</h3>
+                    <p>Establish clear governance with executive summary, objectives, scope, and success criteria templates.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">380 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <div class="tool-type">WORD TEMPLATE</div>
+                    <h3>Status Report Template</h3>
+                    <p>Weekly status report format with accomplishments, upcoming activities, issues, and risks sections.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">220 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🎓</div>
+                    <div class="tool-type">WORD TEMPLATE</div>
+                    <h3>Training Plan Template</h3>
+                    <p>Comprehensive training strategy template with audience analysis, content outline, and delivery plan.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">340 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📋</div>
+                    <div class="tool-type">WORD TEMPLATE</div>
+                    <h3>SOW Template (3 Tiers)</h3>
+                    <p>Pre-built Statement of Work templates for low, medium, and high complexity implementations.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">520 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PowerPoint Templates Section -->
+        <section class="mt-40">
+            <h2 class="section-title">📊 PowerPoint Presentations</h2>
+            <p class="section-subtitle">Professional presentation decks for stakeholder communication</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <div class="tool-type">POWERPOINT DECK</div>
+                    <h3>Kickoff Meeting Presentation</h3>
+                    <p>60-slide deck covering project overview, methodology, team structure, governance, and next steps.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">5.2 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">💼</div>
+                    <div class="tool-type">POWERPOINT DECK</div>
+                    <h3>Executive Summary Presentation</h3>
+                    <p>15-minute executive presentation with value proposition, approach, timeline, and investment summary.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">3.8 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🖥️</div>
+                    <div class="tool-type">POWERPOINT DECK</div>
+                    <h3>Demo Script & Slides</h3>
+                    <p>45-minute standard demo with script, screenshots, and talking points for Oracle WHT capabilities.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">12.4 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📈</div>
+                    <div class="tool-type">POWERPOINT DECK</div>
+                    <h3>Steering Committee Deck</h3>
+                    <p>Monthly executive reporting format with status, milestones, risks, decisions needed, and financials.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">2.1 MB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scripts & Code Section -->
+        <section class="mt-40">
+            <h2 class="section-title">💻 Scripts & Code Templates</h2>
+            <p class="section-subtitle">Ready-to-use scripts for data migration and automation</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🗄️</div>
+                    <div class="tool-type">SQL SCRIPTS</div>
+                    <h3>Data Extraction Scripts</h3>
+                    <p>SQL queries for extracting supplier, certificate, and transaction data from common source systems.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">180 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🔄</div>
+                    <div class="tool-type">PYTHON SCRIPTS</div>
+                    <h3>Data Transformation Scripts</h3>
+                    <p>Python scripts for data cleansing, transformation, and validation before loading into Oracle.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">240 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">✅</div>
+                    <div class="tool-type">SQL SCRIPTS</div>
+                    <h3>Data Validation Queries</h3>
+                    <p>Comprehensive SQL validation scripts to ensure data integrity post-migration.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">160 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🔙</div>
+                    <div class="tool-type">SQL SCRIPTS</div>
+                    <h3>Rollback & Recovery Scripts</h3>
+                    <p>Pre-migration backup and rollback procedures for safe data migration.</p>
+                    <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+                        <span style="font-size: 12px; color: var(--deloitte-dark-gray);">140 KB • Updated Jan 2025</span>
+                    </div>
+                    <button class="btn btn-outline btn-small mt-20">Download</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download All Section -->
+        <div class="download-box" style="margin-top: 60px;">
+            <h3>📥 Download Complete Toolkit</h3>
+            <p>Get all templates, tools, and scripts in one comprehensive package (78.4 MB)</p>
+            <button class="btn btn-primary mt-20">Download Everything</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>About WHT Playbook</h4>
+                    <p>Your comprehensive resource for withholding tax automation implementations across 50+ countries using Oracle native solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sales.html">Sales & Setup</a></li>
+                        <li><a href="implementation.html">Implementation</a></li>
+                        <li><a href="countries.html">Country Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="tools.html">Templates & Tools</a></li>
+                        <li><a href="oracle.html">Oracle Technical</a></li>
+                        <li><a href="training.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:wht.playbook@deloitte.com">wht.playbook@deloitte.com</a></li>
+                        <li>Teams Channel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Deloitte US. All rights reserved. • Version 2.0.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

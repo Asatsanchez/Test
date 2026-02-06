@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Technical - WHT Playbook</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div>Deloitte US Tax Technology</div>
+                <div class="language-selector" id="languageSelector">
+                    <span>🌐</span>
+                    <span id="currentLanguage">English</span>
+                    <span>▼</span>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option active" data-lang="en">🇺🇸 English</div>
+                        <div class="language-option" data-lang="es">🇪🇸 Español</div>
+                        <div class="language-option" data-lang="fr">🇫🇷 Français</div>
+                        <div class="language-option" data-lang="de">🇩🇪 Deutsch</div>
+                        <div class="language-option" data-lang="pt">🇵🇹 Português</div>
+                        <div class="language-option" data-lang="zh">🇨🇳 中文</div>
+                        <div class="language-option" data-lang="ja">🇯🇵 日本語</div>
+                        <div class="language-option" data-lang="hi">🇮🇳 हिन्दी</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="logo-section">
+                <div class="deloitte-logo">
+                    Deloitte<span class="deloitte-dot">.</span>
+                </div>
+                <div class="playbook-title">WHT Automation Playbook</div>
+            </div>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sales.html" class="nav-link">Sales & Setup</a>
+                <a href="implementation.html" class="nav-link">Implementation</a>
+                <a href="countries.html" class="nav-link">Country Library</a>
+                <a href="tools.html" class="nav-link">Templates & Tools</a>
+                <a href="oracle.html" class="nav-link active">Oracle Technical</a>
+                <a href="training.html" class="nav-link">Training</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header header-oracle">
+            <h1>Oracle Technical Documentation</h1>
+            <p>Complete Technical Setup & Configuration Guides</p>
+        </div>
+
+        <!-- Technical Tabs -->
+        <div class="tech-tabs" style="background: var(--white); border-bottom: 2px solid var(--border); padding: 0 20px; margin-bottom: 40px; border-radius: 8px;">
+            <button class="tech-tab active" data-tab="setup">Initial Setup</button>
+            <button class="tech-tab" data-tab="configuration">Tax Configuration</button>
+            <button class="tech-tab" data-tab="integration">Integration Patterns</button>
+            <button class="tech-tab" data-tab="reporting">Reporting Setup</button>
+            <button class="tech-tab" data-tab="troubleshooting">Troubleshooting</button>
+        </div>
+
+        <!-- Tab Content: Initial Setup -->
+        <div class="tech-content active" id="setup">
+            <div class="phase-section">
+                <h2>Initial Environment Setup</h2>
+                <p class="phase-description">
+                    Step-by-step guide to configure your Oracle ERP Cloud environment for withholding tax automation.
+                </p>
+
+                <div class="info-section">
+                    <h3>Prerequisites</h3>
+                    <ul class="info-list">
+                        <li>Oracle ERP Cloud subscription with Financials module</li>
+                        <li>Tax functionality enabled in your instance</li>
+                        <li>Appropriate security roles and privileges</li>
+                        <li>Access to Tax Configuration workspace</li>
+                        <li>Understanding of your country's WHT regulations</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Step 1: Enable Tax Features</h3>
+                    <p style="margin-bottom: 16px;">Navigate to Setup and Maintenance → Tax → Tax Configuration</p>
+                    
+                    <div class="code-header">Navigation Path</div>
+                    <div class="code-block">
+Setup and Maintenance → Search: "Manage Tax Configuration"
+→ Select your Business Unit
+→ Tax Configuration Status: Enabled
+→ Save and Close
+                    </div>
+
+                    <p style="margin: 20px 0;"><strong>Key Settings to Enable:</strong></p>
+                    <ul class="info-list">
+                        <li><strong>Tax Recovery:</strong> Enable if you need to track recoverable WHT</li>
+                        <li><strong>Self-Assessment Tax:</strong> Enable for reverse charge scenarios</li>
+                        <li><strong>Tax Reporting:</strong> Enable for statutory reporting requirements</li>
+                        <li><strong>Tax Exception Management:</strong> Enable for exception workflows</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Step 2: Set Up Legal Entity Parameters</h3>
+                    <p style="margin-bottom: 16px;">Configure legal entity-specific tax settings</p>
+                    
+                    <div class="code-header">Configuration Steps</div>
+                    <div class="code-block">
+Setup and Maintenance → Financials → Legal Entities
+→ Select Legal Entity
+→ Tax Tab
+→ Tax Registration Number: [Enter Tax ID]
+→ Tax Regime: Select applicable regime
+→ Reporting Context: [Select country]
+→ Save
+                    </div>
+
+                    <ul class="info-list" style="margin-top: 20px;">
+                        <li>Configure tax registration numbers for all operating countries</li>
+                        <li>Set up establishment/branch information if applicable</li>
+                        <li>Define tax reporting hierarchy</li>
+                        <li>Configure fiscal year and reporting periods</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Step 3: Configure Tax Options</h3>
+                    
+                    <div class="code-header">Tax Options Configuration</div>
+                    <div class="code-block">
+Setup and Maintenance → Tax → Manage Tax Options
+→ Create New Option or Edit Existing
+
+Key Options to Configure:
+- Withholding Tax Type: Select "Supplier" or "Customer"
+- Calculation Method: "Standard" or "Gross-Up"
+- Rounding Rule: "Standard Rounding" or custom
+- Tax Applicability: "All Transactions" or filtered
+- Allow Manual Override: Yes/No
+- Certificate Validation: Automatic/Manual
+                    </div>
+                </div>
+
+                <div class="download-box" style="margin-top: 40px;">
+                    <h3>📥 Download Setup Checklist</h3>
+                    <p>Complete environment setup checklist with screenshots (4.8 MB)</p>
+                    <button class="btn btn-primary mt-20">Download Checklist</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: Tax Configuration -->
+        <div class="tech-content" id="configuration">
+            <div class="phase-section">
+                <h2>Tax Configuration Setup</h2>
+                <p class="phase-description">
+                    Detailed configuration steps for tax regimes, rates, and determination rules.
+                </p>
+
+                <div class="info-section">
+                    <h3>Tax Regime Configuration</h3>
+                    <p style="margin-bottom: 16px;">Tax Regimes define the country-specific tax framework</p>
+                    
+                    <div class="code-header">Create New Tax Regime</div>
+                    <div class="code-block">
+Setup and Maintenance → Tax → Manage Tax Configuration
+→ Tax Regimes tab → Create
+
+Required Fields:
+- Tax Regime Code: [e.g., US_WHT, IN_TDS, BR_IRRF]
+- Tax Regime Name: [Descriptive name]
+- Tax: [Select "Withholding Tax"]
+- Geography Type: Country
+- Geography: [Select country]
+- Effective From: [Start date]
+- Tax Currency: [Country currency]
+
+Advanced Options:
+- Allow Tax Recovery: Yes/No
+- Process for Applicability: Before/After Calculations
+- Tax Calculation Formula: Standard
+- Allow Override: Yes/No
+- Rounding Level: Line/Tax/Document
+                    </div>
+
+                    <p style="margin: 20px 0;"><strong>Example: United States Backup Withholding</strong></p>
+                    <div class="code-block">
+Regime Code: US_BACKUP_WHT
+Regime Name: US Backup Withholding Tax
+Tax: Withholding Tax
+Geography: United States
+Tax Rate: 24%
+Effective From: 01-JAN-2024
+Allow Certificate: Yes
+Certificate Type: W-9
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Tax Rate Configuration</h3>
+                    <p style="margin-bottom: 16px;">Define tax rates for different scenarios</p>
+                    
+                    <div class="code-header">Create Tax Rate</div>
+                    <div class="code-block">
+Tax Configuration → Tax Rates → Create
+
+Required Information:
+- Tax Regime: [Select from dropdown]
+- Tax: Withholding Tax
+- Tax Status: [Standard, Reduced, Exempt]
+- Tax Jurisdiction: [Country/State/Province]
+- Tax Rate Code: [e.g., WHT_STANDARD_10]
+- Percentage Rate: [e.g., 10.00]
+- Effective From/To: [Date range]
+
+Rate Types:
+1. Statutory Rate: Standard country rate
+2. Treaty Rate: Bilateral agreement rate
+3. Certificate Rate: Document-based override
+4. Exempt Rate: 0% for qualified transactions
+                    </div>
+
+                    <p style="margin: 20px 0;"><strong>Example: India TDS Rates</strong></p>
+                    <div class="code-block">
+Section 194J - Professional Services:
+- Rate Code: IN_TDS_194J
+- Rate: 10.00%
+- Effective From: 01-APR-2024
+
+Section 194C - Contractors:
+- Rate Code: IN_TDS_194C
+- Rate: 2.00% (Individual), 1.00% (Company)
+- Effective From: 01-APR-2024
+
+Section 195 - Non-Resident Payments:
+- Rate Code: IN_TDS_195
+- Rate: 20.00% (Default)
+- Treaty Rate: Variable based on country
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Tax Determination Rules</h3>
+                    <p style="margin-bottom: 16px;">Configure rules to automatically determine correct tax treatment</p>
+                    
+                    <div class="code-header">Create Determination Rule</div>
+                    <div class="code-block">
+Tax Configuration → Tax Rules → Create
+
+Rule Structure:
+IF [Conditions] THEN [Actions]
+
+Common Conditions:
+- Supplier Country = [Country]
+- Service Type = [Category]
+- Payment Amount > [Threshold]
+- Certificate Status = [Valid/Invalid/Missing]
+- Supplier Tax Classification = [Type]
+- Transaction Date within Certificate Validity
+
+Actions:
+- Apply Tax Rate: [Rate Code]
+- Apply Tax Status: [Standard/Reduced/Exempt]
+- Generate Alert: [For exceptions]
+- Require Manual Review: [For complex scenarios]
+                    </div>
+
+                    <p style="margin: 20px 0;"><strong>Example: US Treaty Rate Application</strong></p>
+                    <div class="code-block">
+Rule Name: US Treaty Rate - UK Supplier
+Priority: 10
+
+Conditions:
+- Supplier Country = United Kingdom
+- Tax Certificate Type = W-8BEN
+- Certificate Status = Valid
+- Service Type = Royalties
+
+Actions:
+- Apply Tax Rate = US_TREATY_UK_0PCT
+- Tax Status = Exempt
+- Update Tax Accounting = Record treaty exemption
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Certificate Management Setup</h3>
+                    <p style="margin-bottom: 16px;">Configure certificate types and validation rules</p>
+                    
+                    <div class="code-header">Configure Certificate Types</div>
+                    <div class="code-block">
+Setup and Maintenance → Tax → Manage Tax Certificate Types
+
+Certificate Attributes:
+- Certificate Type Code: [e.g., W9, W8BEN, FORM197]
+- Description: [Full name]
+- Country: [Applicable country]
+- Validity Period: [Days/Months/Years]
+- Required Fields: [List of mandatory attributes]
+- Validation Rules: [Automatic checks]
+- Renewal Notice: [Days before expiry]
+
+Example - India Form 197 (Lower Deduction Certificate):
+- Type Code: IN_FORM197
+- Valid For: Fiscal year or specific period
+- Required Fields: PAN, Rate approved, Valid from/to
+- Validation: Check against Income Tax portal
+- Auto-renewal: No (requires annual application)
+                    </div>
+                </div>
+
+                <div class="download-box" style="margin-top: 40px;">
+                    <h3>📥 Download Configuration Guide</h3>
+                    <p>Complete configuration guide with examples for 54 countries (18.6 MB)</p>
+                    <button class="btn btn-primary mt-20">Download Guide</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: Integration Patterns -->
+        <div class="tech-content" id="integration">
+            <div class="phase-section">
+                <h2>Integration Patterns & Best Practices</h2>
+                <p class="phase-description">
+                    Common integration scenarios and implementation patterns for WHT automation.
+                </p>
+
+                <div class="info-section">
+                    <h3>Integration Architecture Overview</h3>
+                    <p>Oracle ERP Cloud supports multiple integration methods. Choose based on your requirements:</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0;">
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--deloitte-blue);">
+                            <h4 style="margin-bottom: 12px; color: var(--deloitte-blue);">REST APIs</h4>
+                            <p style="font-size: 14px; margin-bottom: 12px;">Real-time, synchronous integration</p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray);">
+                                <strong>Use For:</strong> Real-time data sync, on-demand queries, immediate validation<br>
+                                <strong>Latency:</strong> &lt;1 second<br>
+                                <strong>Best For:</strong> Invoice creation, certificate validation
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--deloitte-orange);">
+                            <h4 style="margin-bottom: 12px; color: var(--deloitte-orange);">SOAP Web Services</h4>
+                            <p style="font-size: 14px; margin-bottom: 12px;">Enterprise service bus integration</p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray);">
+                                <strong>Use For:</strong> Complex transactions, legacy system integration<br>
+                                <strong>Latency:</strong> 1-3 seconds<br>
+                                <strong>Best For:</strong> Payment processing, GL integration
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--deloitte-green);">
+                            <h4 style="margin-bottom: 12px; color: var(--deloitte-green);">FBDI (File-Based Data Import)</h4>
+                            <p style="font-size: 14px; margin-bottom: 12px;">Bulk data upload via CSV/Excel</p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray);">
+                                <strong>Use For:</strong> Mass data loads, scheduled updates<br>
+                                <strong>Latency:</strong> Batch processing<br>
+                                <strong>Best For:</strong> Supplier master, certificates, historical data
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--deloitte-cyan);">
+                            <h4 style="margin-bottom: 12px; color: var(--deloitte-cyan);">Oracle Integration Cloud (OIC)</h4>
+                            <p style="font-size: 14px; margin-bottom: 12px;">iPaaS for complex orchestration</p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray);">
+                                <strong>Use For:</strong> Multi-step workflows, transformation logic<br>
+                                <strong>Latency:</strong> Variable<br>
+                                <strong>Best For:</strong> Multi-system orchestration
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Pattern 1: Real-Time Invoice Creation with WHT</h3>
+                    
+                    <div class="code-header">REST API: Create Invoice with Withholding Tax</div>
+                    <div class="code-block">
+POST /fscmRestApi/resources/11.13.18.05/invoices
+Content-Type: application/json
+Authorization: Bearer {access_token}
+
+{
+  "InvoiceNumber": "INV-2024-001",
+  "InvoiceDate": "2024-01-15",
+  "Supplier": "ACME Services Ltd",
+  "SupplierSite": "London Office",
+  "InvoiceCurrency": "USD",
+  "InvoiceAmount": 10000.00,
+  "BusinessUnit": "US Operations",
+  "Lines": [
+    {
+      "LineNumber": 1,
+      "Description": "Consulting Services",
+      "Amount": 10000.00,
+      "TaxClassificationCode": "WHT_SERVICES",
+      "WithholdingTax": {
+        "TaxRegimeCode": "US_WHT",
+        "TaxRateCode": "TREATY_UK_0PCT",
+        "CertificateNumber": "W8BEN-2024-001",
+        "TaxAmount": 0.00
+      }
+    }
+  ]
+}
+
+Response (Success):
+{
+  "InvoiceId": 300000012345678,
+  "InvoiceNumber": "INV-2024-001",
+  "Status": "Validated",
+  "TotalAmount": 10000.00,
+  "WithholdingTaxAmount": 0.00,
+  "Message": "Invoice created successfully with treaty exemption"
+}
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Pattern 2: Batch Supplier Update with Tax Certificates</h3>
+                    
+                    <div class="code-header">FBDI Template Structure</div>
+                    <div class="code-block">
+File: SupplierTaxCertificates.csv
+
+Required Columns:
+- SupplierNumber
+- SupplierName
+- CertificateType
+- CertificateNumber
+- IssuedDate
+- ExpiryDate
+- TaxRate
+- Status
+- DocumentReference
+
+Example Data:
+SUPP001,Acme Ltd,W8BEN,W8-2024-001,01-JAN-2024,31-DEC-2024,0.00,VALID,DOC123
+SUPP002,Global Co,FORM197,197-2024-002,01-APR-2024,31-MAR-2025,5.00,VALID,DOC124
+
+Upload Process:
+1. Navigate to: Tools → File Import and Export
+2. Select: Import Supplier Tax Certificates
+3. Upload CSV file
+4. Submit and monitor in Scheduled Processes
+5. Review import results and errors
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Pattern 3: Payment File Generation with WHT Deduction</h3>
+                    
+                    <div class="code-header">ESS Job: Generate Payment File</div>
+                    <div class="code-block">
+Process Name: Create Accounting and Payment File
+Parameters:
+- Business Unit: [Your BU]
+- Payment Process Request: [Request Name]
+- Payment Document: [Document Name]
+- Payment Format: [Bank Format]
+
+Output File Structure (ISO20022 example):
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAY20240115001</MsgId>
+      <CreDtTm>2024-01-15T10:00:00</CreDtTm>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMT001</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <ReqdExctnDt>2024-01-16</ReqdExctnDt>
+      <Dbtr>
+        <Nm>Your Company</Nm>
+      </Dbtr>
+      <CdtTrfTxInf>
+        <Amt Ccy="USD">9000.00</Amt>
+        <Cdtr>
+          <Nm>Supplier Name</Nm>
+        </Cdtr>
+        <RmtInf>
+          <Ustrd>Invoice: INV001, Gross: 10000, WHT: 1000</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Integration Error Handling Best Practices</h3>
+                    <ul class="info-list">
+                        <li><strong>Implement Retry Logic:</strong> Exponential backoff for transient failures (network issues, temporary unavailability)</li>
+                        <li><strong>Validate Before Send:</strong> Check data quality and required fields before API calls to minimize failures</li>
+                        <li><strong>Log All Transactions:</strong> Maintain detailed logs with timestamps, request/response payloads, and error messages</li>
+                        <li><strong>Set Up Alerts:</strong> Configure monitoring for integration failures, performance degradation, and data anomalies</li>
+                        <li><strong>Error Categorization:</strong> Separate system errors (retry) from business errors (manual intervention)</li>
+                        <li><strong>Reconciliation Process:</strong> Daily reconciliation between source and target systems to catch missed transactions</li>
+                    </ul>
+                </div>
+
+                <div class="download-box" style="margin-top: 40px;">
+                    <h3>📥 Download Integration Toolkit</h3>
+                    <p>API samples, FBDI templates, and OIC recipes (14.2 MB)</p>
+                    <button class="btn btn-primary mt-20">Download Toolkit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: Reporting -->
+        <div class="tech-content" id="reporting">
+            <div class="phase-section">
+                <h2>Reporting & Analytics Setup</h2>
+                <p class="phase-description">
+                    Configure OTBI analyses and BI Publisher reports for statutory and management reporting.
+                </p>
+
+                <div class="info-section">
+                    <h3>OTBI (Oracle Transactional Business Intelligence)</h3>
+                    <p style="margin-bottom: 16px;">Real-time, ad-hoc analysis and dashboards</p>
+                    
+                    <div class="code-header">Key Subject Areas for WHT</div>
+                    <div class="code-block">
+Available Subject Areas:
+1. Payables - Withholding Tax
+   - Tax transactions by supplier
+   - Certificate tracking and expiry
+   - Tax amounts by country/type
+   - Exception management
+
+2. Payables - Invoice
+   - Invoice-level WHT details
+   - Payment status with tax deductions
+   - Invoice aging with WHT impact
+
+3. Financials - Tax Reporting
+   - Statutory report data
+   - Tax liability summaries
+   - Compliance tracking
+
+Creating Custom Analysis:
+1. Navigate to: Tools → Reports and Analytics
+2. Click: Create → Analysis
+3. Select Subject Area: "Payables - Withholding Tax"
+4. Drag fields to Criteria pane
+5. Add filters (Date range, Country, Supplier)
+6. Add calculations (if needed)
+7. Design layout (Table, Pivot, Chart)
+8. Save and share
+                    </div>
+
+                    <p style="margin: 20px 0;"><strong>Example: Monthly WHT Summary by Country</strong></p>
+                    <div class="code-block">
+Fields Selected:
+- Tax Regime (Country)
+- Supplier Name
+- Invoice Count
+- Gross Invoice Amount (Sum)
+- WHT Amount (Sum)
+- Net Payment Amount (Sum)
+- Tax Rate (Average)
+
+Filters:
+- Invoice Date: This Month
+- Tax Status: Not Exempt
+- Business Unit: US Operations
+
+Calculated Fields:
+- WHT Percentage = (WHT Amount / Gross Amount) * 100
+- Payment Efficiency = Net Amount / Gross Amount
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>BI Publisher Reports</h3>
+                    <p style="margin-bottom: 16px;">Formatted statutory and operational reports</p>
+                    
+                    <div class="code-header">Standard WHT Reports Available</div>
+                    <div class="code-block">
+Out-of-the-Box Reports:
+1. Withholding Tax Certificate Report
+   - Lists all certificates by status
+   - Expiry date tracking
+   - Supplier-wise certificate inventory
+
+2. Withholding Tax Liability Report
+   - Tax liability by period
+   - Country-wise breakdown
+   - Payment status tracking
+
+3. Supplier Withholding Tax Report
+   - Supplier-level WHT summary
+   - Transaction details
+   - Certificate compliance status
+
+4. Withholding Tax Payment Report
+   - Payments made with WHT deduction
+   - Remittance details
+   - Government payment tracking
+                    </div>
+
+                    <p style="margin: 20px 0;"><strong>Creating Custom BI Publisher Report</strong></p>
+                    <div class="code-block">
+Step 1: Create Data Model
+- Navigate to: Reports and Analytics → Browse Catalog
+- Click: Create → Data Model
+- Add Data Set (SQL Query):
+
+SELECT
+    invoice.invoice_num,
+    invoice.invoice_date,
+    supplier.vendor_name,
+    invoice.invoice_amount,
+    wht.tax_rate_code,
+    wht.tax_amount,
+    (invoice.invoice_amount - wht.tax_amount) as net_payment,
+    cert.certificate_number,
+    cert.expiry_date
+FROM
+    ap_invoices_all invoice
+    INNER JOIN po_vendors supplier ON invoice.vendor_id = supplier.vendor_id
+    LEFT JOIN ap_invoice_withholding wht ON invoice.invoice_id = wht.invoice_id
+    LEFT JOIN ap_tax_certificates cert ON supplier.vendor_id = cert.vendor_id
+WHERE
+    invoice.invoice_date BETWEEN :P_START_DATE AND :P_END_DATE
+    AND invoice.org_id = :P_ORG_ID
+ORDER BY
+    supplier.vendor_name, invoice.invoice_date
+
+Step 2: Create Report Template (RTF/Excel)
+- Design layout in MS Word or Excel
+- Insert data fields using BI Publisher syntax
+- Add grouping, subtotals, page breaks
+- Apply company branding and formatting
+
+Step 3: Upload and Test
+- Upload template to report definition
+- Set parameters (Date range, Business Unit)
+- Run report and validate output
+- Schedule for automated generation
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Country-Specific Statutory Reports</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0;">
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                            <h4 style="margin-bottom: 12px; color: var(--deloitte-blue);">🇺🇸 United States</h4>
+                            <p style="font-size: 14px; margin-bottom: 8px;"><strong>Form 1099-NEC</strong></p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray); margin-bottom: 12px;">
+                                Annual reporting of non-employee compensation<br>
+                                <strong>Due:</strong> January 31<br>
+                                <strong>Threshold:</strong> $600
+                            </p>
+                            <p style="font-size: 14px; margin-bottom: 8px;"><strong>Form 1042-S</strong></p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray);">
+                                Foreign person's US source income<br>
+                                <strong>Due:</strong> March 15<br>
+                                <strong>Format:</strong> IRS electronic filing
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                            <h4 style="margin-bottom: 12px; color: var(--deloitte-orange);">🇮🇳 India</h4>
+                            <p style="font-size: 14px; margin-bottom: 8px;"><strong>Form 26Q</strong></p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray); margin-bottom: 12px;">
+                                Quarterly TDS return for non-salary payments<br>
+                                <strong>Due:</strong> 31st of month following quarter<br>
+                                <strong>Format:</strong> Text file via TRACES portal
+                            </p>
+                            <p style="font-size: 14px; margin-bottom: 8px;"><strong>Form 27Q</strong></p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray);">
+                                TDS on foreign remittances<br>
+                                <strong>Due:</strong> 31st of month following quarter<br>
+                                <strong>Format:</strong> Electronic with DSC
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                            <h4 style="margin-bottom: 12px; color: var(--deloitte-green);">🇧🇷 Brazil</h4>
+                            <p style="font-size: 14px; margin-bottom: 8px;"><strong>DIRF</strong></p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray); margin-bottom: 12px;">
+                                Annual declaration of withheld taxes<br>
+                                <strong>Due:</strong> Last business day of February<br>
+                                <strong>Format:</strong> PGD DIRF (Software from RFB)
+                            </p>
+                            <p style="font-size: 14px; margin-bottom: 8px;"><strong>DCTF</strong></p>
+                            <p style="font-size: 13px; color: var(--deloitte-dark-gray);">
+                                Monthly federal tax obligations<br>
+                                <strong>Due:</strong> 15th of following month<br>
+                                <strong>Format:</strong> SPED Fiscal
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Management Dashboards</h3>
+                    <p style="margin-bottom: 16px;">Key metrics to monitor WHT program health</p>
+                    
+                    <ul class="info-list">
+                        <li><strong>Certificate Compliance Rate:</strong> % of suppliers with valid certificates vs. total suppliers subject to WHT</li>
+                        <li><strong>Certificates Expiring (30/60/90 days):</strong> Proactive tracking to prevent compliance gaps</li>
+                        <li><strong>WHT as % of Payments:</strong> Trend analysis to identify anomalies or process improvements</li>
+                        <li><strong>Exception Volume:</strong> Manual interventions required, trend over time</li>
+                        <li><strong>Remittance Timeliness:</strong> Days to remit WHT to government (compliance metric)</li>
+                        <li><strong>Audit Trail Completeness:</strong> % of transactions with complete documentation</li>
+                        <li><strong>Cost Savings:</strong> Time saved vs. manual process (ROI tracking)</li>
+                    </ul>
+                </div>
+
+                <div class="download-box" style="margin-top: 40px;">
+                    <h3>📥 Download Reporting Package</h3>
+                    <p>OTBI analyses, BI Publisher templates, SQL queries (9.8 MB)</p>
+                    <button class="btn btn-primary mt-20">Download Package</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: Troubleshooting -->
+        <div class="tech-content" id="troubleshooting">
+            <div class="phase-section">
+                <h2>Troubleshooting Guide</h2>
+                <p class="phase-description">
+                    Common issues, root causes, and resolution steps for WHT implementations.
+                </p>
+
+                <div class="info-section">
+                    <h3>Issue 1: Tax Not Calculating on Invoice</h3>
+                    
+                    <p style="margin: 16px 0;"><strong>Symptoms:</strong></p>
+                    <ul class="info-list">
+                        <li>Invoice created but no withholding tax calculated</li>
+                        <li>Tax line missing from invoice details</li>
+                        <li>Expected tax amount is zero</li>
+                    </ul>
+
+                    <p style="margin: 16px 0;"><strong>Possible Root Causes & Solutions:</strong></p>
+                    
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 16px 0;">
+                        <p style="font-weight: 600; margin-bottom: 12px;">Cause 1: Tax Determination Rule Not Firing</p>
+                        <div class="code-block" style="margin: 12px 0;">
+Verification Steps:
+1. Check rule conditions match transaction attributes
+2. Verify rule priority and processing order
+3. Test rule in tax simulator
+
+SQL to Check Rules:
+SELECT
+    rule_name,
+    rule_order,
+    enabled_flag,
+    effective_from,
+    effective_to
+FROM
+    zx_rules_b
+WHERE
+    tax_regime_code = 'YOUR_REGIME'
+    AND SYSDATE BETWEEN effective_from AND NVL(effective_to, SYSDATE)
+ORDER BY
+    rule_order;
+
+Resolution:
+- Adjust rule conditions to match actual data
+- Check date effectivity of rules
+- Verify determination factors in setup
+                        </div>
+                    </div>
+
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 16px 0;">
+                        <p style="font-weight: 600; margin-bottom: 12px;">Cause 2: Supplier Configuration Missing</p>
+                        <div class="code-block" style="margin: 12px 0;">
+Verification Steps:
+1. Check supplier tax classification
+2. Verify tax registration number
+3. Confirm site-level tax setup
+
+SQL to Check Supplier Setup:
+SELECT
+    vendor.vendor_name,
+    vendor.tax_reference,
+    site.vendor_site_code,
+    site.income_tax_region,
+    site.allow_withholding_tax_flag
+FROM
+    po_vendors vendor
+    INNER JOIN po_vendor_sites_all site
+        ON vendor.vendor_id = site.vendor_id
+WHERE
+    vendor.vendor_name = 'SUPPLIER_NAME';
+
+Resolution:
+- Add tax classification to supplier
+- Enable withholding tax at site level
+- Update tax registration information
+                        </div>
+                    </div>
+
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 16px 0;">
+                        <p style="font-weight: 600; margin-bottom: 12px;">Cause 3: Tax Regime Not Active</p>
+                        <div class="code-block" style="margin: 12px 0;">
+Verification:
+Navigate to: Setup → Tax → Tax Configuration
+Check: Regime status = Active
+Check: Effective dates encompass transaction date
+
+Resolution:
+- Activate tax regime if inactive
+- Adjust effective dates if needed
+- Verify geography assignment
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Issue 2: Incorrect Tax Rate Applied</h3>
+                    
+                    <p style="margin: 16px 0;"><strong>Symptoms:</strong></p>
+                    <ul class="info-list">
+                        <li>Tax calculated but at wrong percentage</li>
+                        <li>Certificate rate override not working</li>
+                        <li>Treaty rate not being applied</li>
+                    </ul>
+
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 16px 0;">
+                        <p style="font-weight: 600; margin-bottom: 12px;">Diagnostic Query: Trace Tax Calculation</p>
+                        <div class="code-block" style="margin: 12px 0;">
+SELECT
+    lines.invoice_id,
+    lines.line_number,
+    dist.line_type_lookup_code,
+    dist.amount,
+    tax.tax_id,
+    tax.tax_regime_code,
+    tax.tax_rate_code,
+    tax.tax_rate,
+    tax.tax_amt,
+    rules.rule_name,
+    rules.precedence
+FROM
+    ap_invoice_lines_all lines
+    INNER JOIN ap_invoice_distributions_all dist
+        ON lines.invoice_id = dist.invoice_id
+        AND lines.line_number = dist.invoice_line_number
+    LEFT JOIN zx_lines tax
+        ON dist.invoice_id = tax.trx_id
+    LEFT JOIN zx_lines_det_factors rules
+        ON tax.tax_line_id = rules.tax_line_id
+WHERE
+    lines.invoice_id = YOUR_INVOICE_ID
+ORDER BY
+    lines.line_number, dist.distribution_line_number;
+                        </div>
+                    </div>
+
+                    <p style="margin: 16px 0;"><strong>Common Fixes:</strong></p>
+                    <ul class="info-list">
+                        <li><strong>Certificate Not Linked:</strong> Verify certificate is attached to supplier and status is "Valid"</li>
+                        <li><strong>Rate Priority Wrong:</strong> Check tax rate precedence rules, ensure certificate rates have higher priority</li>
+                        <li><strong>Date Mismatch:</strong> Confirm transaction date falls within certificate validity period</li>
+                        <li><strong>Manual Override Blocked:</strong> Check if manual rate override is enabled in tax options</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Issue 3: Performance Issues (Slow Tax Calculation)</h3>
+                    
+                    <p style="margin: 16px 0;"><strong>Optimization Techniques:</strong></p>
+                    
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 16px 0;">
+                        <p style="font-weight: 600; margin-bottom: 12px;">1. Rule Optimization</p>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Minimize number of active rules (consolidate where possible)</li>
+                            <li>Order rules by most common to least common scenarios</li>
+                            <li>Use simple conditions before complex conditions</li>
+                            <li>Avoid OR conditions (split into separate rules if needed)</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 16px 0;">
+                        <p style="font-weight: 600; margin-bottom: 12px;">2. Database Performance</p>
+                        <div class="code-block" style="margin: 12px 0;">
+-- Gather statistics on tax tables
+BEGIN
+    DBMS_STATS.GATHER_TABLE_STATS(
+        ownname => 'FUSION',
+        tabname => 'ZX_LINES',
+        estimate_percent => DBMS_STATS.AUTO_SAMPLE_SIZE,
+        method_opt => 'FOR ALL COLUMNS SIZE AUTO'
+    );
+END;
+
+-- Check for missing indexes
+SELECT
+    table_name,
+    column_name,
+    num_rows
+FROM
+    dba_tab_columns
+WHERE
+    owner = 'FUSION'
+    AND table_name LIKE 'ZX_%'
+    AND column_name IN ('TAX_REGIME_CODE', 'TRX_ID', 'APPLICATION_ID')
+    AND column_name NOT IN (
+        SELECT column_name
+        FROM dba_ind_columns
+        WHERE table_owner = 'FUSION'
+    );
+                        </div>
+                    </div>
+
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 16px 0;">
+                        <p style="font-weight: 600; margin-bottom: 12px;">3. Batch Processing</p>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Process invoices in batches during off-peak hours</li>
+                            <li>Use concurrent program for mass invoice import</li>
+                            <li>Split large data loads into smaller chunks</li>
+                            <li>Schedule tax calculation separately from invoice validation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Support Resources</h3>
+                    <ul class="info-list">
+                        <li><strong>Oracle Support (My Oracle Support):</strong> Log SR for technical issues, patches, and bugs</li>
+                        <li><strong>Oracle Cloud Customer Connect:</strong> Community forums for best practices and solutions</li>
+                        <li><strong>Tax Configuration Logs:</strong> Enable diagnostic logging in Manage Administrator Profile Values</li>
+                        <li><strong>Deloitte WHT Team:</strong> Internal escalation for complex country-specific issues</li>
+                    </ul>
+
+                    <div class="code-block" style="margin: 20px 0;">
+Enable Tax Debug Logging:
+Setup → Maintenance → Manage Administrator Profile Values
+Profile: ZX: Debug Level
+Value: STATEMENT (for detailed logging)
+       PROCEDURE (for moderate logging)
+       
+View Logs:
+Navigate to: Tools → Scheduled Processes
+Find: Calculate Tax (ESS Job)
+View: Log and Output files
+                    </div>
+                </div>
+
+                <div class="download-box" style="margin-top: 40px;">
+                    <h3>📥 Download Troubleshooting Guide</h3>
+                    <p>Complete diagnostic scripts and resolution steps (6.4 MB)</p>
+                    <button class="btn btn-primary mt-20">Download Guide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>About WHT Playbook</h4>
+                    <p>Your comprehensive resource for withholding tax automation implementations across 50+ countries using Oracle native solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sales.html">Sales & Setup</a></li>
+                        <li><a href="implementation.html">Implementation</a></li>
+                        <li><a href="countries.html">Country Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="tools.html">Templates & Tools</a></li>
+                        <li><a href="oracle.html">Oracle Technical</a></li>
+                        <li><a href="training.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:wht.playbook@deloitte.com">wht.playbook@deloitte.com</a></li>
+                        <li>Teams Channel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Deloitte US. All rights reserved. • Version 2.0.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize tech tabs
+        initTechTabs();
+    </script>
+</body>
+</html>
